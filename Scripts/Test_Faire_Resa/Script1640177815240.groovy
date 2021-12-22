@@ -19,15 +19,23 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
+WebUI.waitForPageLoad(5)
+
 WebUI.navigateToUrl('https://katalon-demo-cura.herokuapp.com/')
 
-WebUI.click(findTestObject('Object Repository/Page_CURA Healthcare Service/a_Make Appointment'))
+WebUI.waitForPageLoad(0, FailureHandling.STOP_ON_FAILURE)
 
-WebUI.setText(findTestObject('Object Repository/Page_CURA Healthcare Service/input_Username_username'), 'John Doe')
+WebUI.click(findTestObject('Page_CURA Healthcare Service/Bouton Make Appointment'))
 
-WebUI.setEncryptedText(findTestObject('Object Repository/Page_CURA Healthcare Service/input_Password_password'), 'g3/DOGG74jC3Flrr3yH+3D/yKbOqqUNM')
+WebUI.waitForPageLoad(0, FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Object Repository/Page_CURA Healthcare Service/button_Login'))
+WebUI.setText(findTestObject('Page_CURA Healthcare Service/Entrez Username'), 'John Doe')
+
+WebUI.setEncryptedText(findTestObject('Page_CURA Healthcare Service/Entrez Password'), 'g3/DOGG74jC3Flrr3yH+3D/yKbOqqUNM')
+
+WebUI.waitForPageLoad(0, FailureHandling.STOP_ON_FAILURE)
+
+WebUI.click(findTestObject('Page_CURA Healthcare Service/Bouton Login'))
 
 WebUI.selectOptionByValue(findTestObject('Object Repository/Page_CURA Healthcare Service/select_Tokyo CURA Healthcare Center        _5b4107'), 
     'Hongkong CURA Healthcare Center', true)
@@ -42,7 +50,9 @@ WebUI.click(findTestObject('Object Repository/Page_CURA Healthcare Service/td_24
 
 WebUI.setText(findTestObject('Object Repository/Page_CURA Healthcare Service/textarea_Comment_comment'), 'Automatisation rocks yeah!')
 
-WebUI.click(findTestObject('Object Repository/Page_CURA Healthcare Service/button_Book Appointment'))
+WebUI.click(findTestObject('Page_CURA Healthcare Service/Bouton Book Appointment'))
+
+WebUI.waitForElementPresent(findTestObject('Page_CURA Healthcare Service/a_Go to Homepage'), 5)
 
 WebUI.click(findTestObject('Object Repository/Page_CURA Healthcare Service/a_Go to Homepage'))
 
