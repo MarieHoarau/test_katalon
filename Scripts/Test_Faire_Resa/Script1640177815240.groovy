@@ -52,7 +52,7 @@ WebUI.setText(findTestObject('Object Repository/Page_CURA Healthcare Service/tex
 
 WebUI.click(findTestObject('Page_CURA Healthcare Service/Bouton Book Appointment'))
 
-WebUI.waitForElementPresent(findTestObject('Page_CURA Healthcare Service/a_Go to Homepage'), 5)
+WebUI.waitForPageLoad(0, FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Object Repository/Page_CURA Healthcare Service/a_Go to Homepage'))
 

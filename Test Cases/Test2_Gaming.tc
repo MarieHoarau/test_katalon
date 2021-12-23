@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Test pout recherche boss du jeu Lardeur</description>
+   <name>Test2_Gaming</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>754393fc-1595-49b7-abc9-f1ec92b4875c</testCaseGuid>
+</TestCaseEntity>
